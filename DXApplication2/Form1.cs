@@ -61,10 +61,7 @@ namespace DXApplication2
 
         private void iExit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (XtraMessageBox.Show("ნამდვილად გსურთ გასვლა?", "გასვლა", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -85,6 +82,44 @@ namespace DXApplication2
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             RefillAllGrids();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (XtraMessageBox.Show("ნამდვილად გსურთ გასვლა?", "გასვლა", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void inboxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tabControl.SelectedTabPageIndex = 0;
+        }
+
+        private void outboxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tabControl.SelectedTabPageIndex = 1;
+        }
+
+        private void draftsItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tabControl.SelectedTabPageIndex = 2;
+        }
+
+        private void tasksItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tabControl.SelectedTabPageIndex = 3;
+        }
+
+        private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            tabControl.SelectedTabPageIndex = 4;
+        }
+
+        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraMessageBox.Show("ეს შესაძლებლობაც მალე დაემატება,\nმადლობა მოთმინებისთვის!");
         }
     }
 }
