@@ -112,6 +112,7 @@
     <None Include="DatabaseLib\DevExpressTutorial.vshost.exe.manifest" />
     <None Include="Properties\DataSources\LibraryDatabase.Author.datasource" />
     <None Include="Properties\DataSources\LibraryDatabase.Book.datasource" />
+    <None Include="Properties\DataSources\LibraryDatabase.Customer.datasource" />
     <None Include="Properties\DataSources\LibraryDatabase.Genre.datasource" />
     <None Include="Properties\DataSources\LibraryDatabase.LibraryDbContext.datasource" />
     <None Include="Properties\DataSources\LibraryDatabase.Transaction.datasource" />
